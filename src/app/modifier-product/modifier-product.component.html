@@ -1,0 +1,19 @@
+<div>
+    <h2>Modifier le produit</h2>
+    <form (ngSubmit)="updateProduct()">
+      <div>
+        <label for="productName">Nom du produit :</label>
+        <input type="text" id="productName" name="productName" [(ngModel)]="product.name">
+      </div>
+      <div>
+        <label for="productDescription">Description du produit :</label>
+        <textarea id="productDescription" name="productDescription" [(ngModel)]="product.description"></textarea>
+      </div>
+      <div>
+        <label for="productPrice">Prix du produit :</label>
+        <input type="number" id="productPrice" name="productPrice" [(ngModel)]="product.price">
+      </div>
+      <button type="submit">Modifier le produit</button>
+    </form>
+  </div>
+  

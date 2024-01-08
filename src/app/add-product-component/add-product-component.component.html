@@ -1,0 +1,42 @@
+<!-- add-product-component.component.html   -->
+<div class="container">
+    <h2>Ajouter un produit</h2>
+  
+    <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" class="form">
+      <div class="form-group">
+        <label for="productName">Nom du produit :</label>
+        <input type="text" id="productName" name="productName" ngModel required #productName="ngModel"
+          class="form-control">
+        <div *ngIf="productName.invalid && (productName.dirty || productName.touched)" class="text-danger">
+          <p *ngIf="productName.errors?.['required']">Le nom du produit est obligatoire.</p>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="productDescription">Description du produit :</label>
+        <textarea id="productDescription" name="productDescription" ngModel required minlength="10"
+          #productDescription="ngModel" class="form-control"></textarea>
+        <div *ngIf="productDescription.invalid && (productDescription.dirty || productDescription.touched)"
+          class="text-danger">
+          <p *ngIf="productDescription.errors?.['required']">La description du produit est obligatoire.</p>
+          <p *ngIf="productDescription.errors?.['minlength']">La description doit contenir au moins 10 caractères.</p>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="productPrice">Prix du produit :</label>
+        <input type="number" id="productPrice" name="productPrice" ngModel required pattern="[0-9]+"
+          #productPrice="ngModel" class="form-control">
+        <div *ngIf="productPrice.invalid && (productPrice.dirty || productPrice.touched)" class="text-danger">
+          <p *ngIf="productPrice.errors?.['required']">Le prix du produit est obligatoire.</p>
+          <p *ngIf="productPrice.errors?.['pattern']">Le prix ne contient que des caractères numériques.</p>
+        </div>
+        <div *ngIf="productAdded" class="alert alert-success mt-3">
+            Product Successfully added
+          </div>
+      </div>
+  
+      <button type="submit" [disabled]="productForm.invalid" class="btn btn-primary">Ajouter le produit</button>
+    </form>
+  </div>
+  -->

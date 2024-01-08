@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "hello",
+      "description": "from the other side",
+      "price": 13
+    },
+    {
+      "id": 3,
+      "name": "Produit 3",
+      "description": "Description du produit 3",
+      "price": 39.99
+    },
+    {
+      "name": "Malek Zaidi",
+      "description": "zzzzzzzzzzz",
+      "price": 12,
+      "id": 4
+    },
+    {
+      "name": "zdadzadazzadzad",
+      "description": "malekziaididzidzi",
+      "price": 0,
+      "id": 5
+    }
+  ]
+}

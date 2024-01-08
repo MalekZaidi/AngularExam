@@ -1,0 +1,13 @@
+<!-- home.component.html -->
+<div>
+    <h2>Liste des produits</h2>
+    <div *ngFor="let product of products">
+      <h3>Product {{ product.id }}</h3>
+      <p>Price = {{ product.price }}</p>
+      <button (click)="deleteProduct(product.id)">DELETE</button>
+      <button routerLink="/modify/{{ product.id }}">MODIFY</button>
+      <button (click)="buyProduct(product)">BUY</button>
+      <button (click)="showDetails(product)">DETAILS</button>
+    </div>
+  </div>
+<!-- #region -->
